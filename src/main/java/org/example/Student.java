@@ -3,6 +3,12 @@ package org.example;
 import java.util.Comparator;
 import java.util.List;
 
+//Первый принцип "единственной ответствености" соблюден, каждый класс реализован под одну задачу. 
+
+// Второй принцип "закрытости открытости" соблюден, поля класов закрыты для изменения, внести изменения можно только через открытые методы.
+
+
+
 class Student {
     private String name;
 
@@ -14,18 +20,22 @@ class Student {
         return name;
     }
 }
+
+
+//Третий принцип "подстановки подстановки Барбары Лисков".
+
 class StudentExtended extends Student{
     public StudentExtended(String name) {
         super(name);
 
     }
 }
-
-// Параметризованный класс для представления группы студентов
+//Четвёртый принцип "разделение интинтерфейсов".
+// пятый принцип "иинверсии зависимостей".
 class User {
-    String name;
-    String surname;
-    String patronymic;
+    private String name;
+    private String surname;
+    private String patronymic;
 
     public User(String name, String surname, String patronymic) {
         this.name = name;
